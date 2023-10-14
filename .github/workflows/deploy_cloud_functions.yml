@@ -5,6 +5,9 @@ on:
   push:
     branches: [ master ]
 
+env:
+  SALESFORCE_CREDENTIAL_BUCKET: ${{secrets.SALESFORCE_CREDENTIAL_BUCKET}}
+
 jobs:
   build:
     runs-on: ubuntu-latest
