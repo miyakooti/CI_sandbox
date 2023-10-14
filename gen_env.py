@@ -30,7 +30,9 @@ if __name__ == "__main__":
     if pf == "Linux":
         source = sys.argv[1]
 
-    FILE_PATH = "./" + source + "/.env.yaml"
+    print("unko")
+
+    FILE_PATH = source + "/.env.yaml"
     with open(FILE_PATH, "w+") as f:
         f.write(CREDENTIAL_BUCKET + ": " + credential_bucket + "\n")
         # f.write(CREDENTIAL_BLOB + ": " + credential_blob + "\n")
