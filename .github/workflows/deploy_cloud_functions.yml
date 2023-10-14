@@ -1,0 +1,24 @@
+name: Deploy Cloud Funcstions
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    # - name: Set up Cloud SDK
+    #   uses: google-github-actions/setup-gcloud@master
+    #   with:
+    #     project_id: aidemy-data-preprocess
+    #     service_account_email: 780967363874-compute@developer.gserviceaccount.com
+    #     service_account_key: ${{ secrets.GCP_SA_KEY }}
+    #     export_default_credentials: true
+
+    - name: Deploy Functions
+      run: sh cd/deploy.sh
